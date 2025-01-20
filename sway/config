@@ -140,9 +140,9 @@ input * {
 	bindsym $mod+Tab workspace next
 	bindsym $mod+Shift+Tab workspace prev
 	# Move to new workspace
-	bindsym $mod+n exec bash ~/.config/sway/newWorkspace.sh
+	#bindsym $mod+n exec bash ~/.config/sway/newWorkspace.sh
 	# Move focused container to new workspace
-	bindsym $mod+Shift+n exec bash ~/.config/sway/moveNewWorkspace.sh
+	#bindsym $mod+Shift+n exec bash ~/.config/sway/moveNewWorkspace.sh
 #
 # Layout stuff:
 #
