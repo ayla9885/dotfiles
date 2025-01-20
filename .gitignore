@@ -1,0 +1,11 @@
+*
+!.gitignore
+
+!sway
+!sway/**
+
+!nvim
+!nvim/**
+
+!alacritty
+!alacritty/**
