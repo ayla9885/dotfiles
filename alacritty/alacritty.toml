@@ -1,0 +1,8 @@
+[general]
+live_config_reload = true
+
+[font]
+normal = { family = "TerminessNerdFontMono", style = "Regular" }
+size = 14
+builtin_box_drawing = false
+
