@@ -6,3 +6,12 @@ normal = { family = "TerminessNerdFontMono", style = "Regular" }
 size = 14
 builtin_box_drawing = false
 
+[window]
+dynamic_title = false
+opacity = 0.80
+
+# [colors.primary]
+# foreground = "#eac2d8"
+# background = "#35345d"
+# dim_foreground = "#BC849C"
+

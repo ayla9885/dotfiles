@@ -4,6 +4,9 @@
 !sway
 !sway/**
 
+!waybar
+!waybar/**
+
 !nvim
 !nvim/**
 
