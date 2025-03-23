@@ -36,4 +36,13 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 	},
+	-- {
+	-- 	"mfussenegger/nvim-jdtls",
+	-- 	config = function()
+	-- 		require("jdtls").start_or_attach({
+	-- 			cmd = {"/usr/bin/jdtls"},
+	-- 			root_dir = vim.fs.dirname(vim.fs.find({"pom.xml", ".git", "gradlew", "mvnw"}, {upward = true})[1]),
+	-- 		})
+	-- 	end,
+	-- },
 }

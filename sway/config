@@ -13,7 +13,10 @@ set $right l
 # Your preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
-set $menu wofi --show drun
+set $menu wofi
+
+# Screenshot tool 
+set $screenshot flameshot gui
 
 ### Output 
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -22,7 +25,7 @@ output "AOC 24G1WG3- PIBL8JA001682" {
 		mode 1920x1080@165.003Hz
 	}
 
-output * bg ~/Pictures/wallpapers/mt_fuji_purple.jpg fill
+output * bg ~/pictures/wallpapers/mt_fuji_purple.jpg fill
 
 ### Appearance
 #
@@ -245,7 +248,7 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym $mod+P exec grim
+    bindsym $mod+P exec $screenshot
 
 ### Window criteria
 #
@@ -261,6 +264,19 @@ for_window [window_role="pop_up"] {
 	}
 
 for_window [title="Extension: (Bitwarden Password Manager) - Bitwarden - LibreWolf"] {
+		floating enable
+	}
+
+# make all godot popups float
+for_window [class="Godot"] {
+		floating enable
+	}
+# but make the main engine fullscreen
+for_window [title=".Godot Engine"] {
+		floating disable
+	}
+# make godot games floating
+for_window [title=".(DEBUG)"] {
 		floating enable
 	}
 
