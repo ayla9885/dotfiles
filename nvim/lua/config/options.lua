@@ -13,7 +13,7 @@ vim.opt.title = true
 
 -- movement
 vim.opt.scrolloff = 20
-vim.opt.sidescrolloff = 60
+vim.opt.sidescrolloff = 0
 vim.opt.smoothscroll = true
 
 -- indentation 

@@ -11,7 +11,7 @@ lspconfig.jdtls.setup {
 	capabilities = capabilities,
 }
 lspconfig.glsl_analyzer.setup {
-	capabilities = capabilites,
+	capabilities = capabilities,
 }
 lspconfig.lua_ls.setup {
 	capabilities = capabilities,
