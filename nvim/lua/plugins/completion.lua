@@ -26,7 +26,11 @@ return {
 	},
 	{
 		"hrsh7th/cmp-nvim-lsp",
-		opts = {},
+		opts = {
+			sources = {
+				{ name = 'nvim_lsp'}
+			}
+		},
 	},
 	{
 		"neovim/nvim-lspconfig",

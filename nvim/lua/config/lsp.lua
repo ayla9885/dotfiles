@@ -1,5 +1,5 @@
 local lspconfig = require("lspconfig")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lspconfig.rust_analyzer.setup {
 	capabilities = capabilities,
@@ -16,4 +16,10 @@ lspconfig.glsl_analyzer.setup {
 lspconfig.lua_ls.setup {
 	capabilities = capabilities,
 }
+
+
+-- show errors after a line
+vim.diagnostic.config({
+	virtual_text = true
+})
 

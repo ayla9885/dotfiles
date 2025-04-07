@@ -1,5 +1,5 @@
 -- general
-vim.cmd[[colorscheme retrobox]]
+vim.cmd[[colorscheme no-clown-fiesta]]
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true

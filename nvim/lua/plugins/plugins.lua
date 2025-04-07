@@ -98,4 +98,9 @@ return {
 		priority = 1000,
 		lazy = false,
 	},
+	{
+		"metalelf0/base16-black-metal-scheme",
+		priority = 1000,
+		lazy = false,
+	}
 }
