@@ -2,8 +2,8 @@
 live_config_reload = true
 
 [font]
-normal = { family = "TerminessNerdFontMono", style = "Regular" }
-size = 14
+#normal = { family = "AgaveNerdFontMono", style = "Regular" }
+size = 14 
 builtin_box_drawing = false
 
 [window]
