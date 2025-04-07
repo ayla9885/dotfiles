@@ -1,28 +1,28 @@
 {
-	"layer": "bottom",
-	"position": "top",
-	"height": 28, // left blank for dynamic value
-	// "width" // left blank for dynamic value
-	"margin-top": 15, // space between edge of the screen
-	"margin-left": 15, // space between edge of the screen
-	"margin-right": 15, // space between edge of the screen
-	"spacing": 10, // space between modules
-	"mode": "dock",
-
+	"position": "left",
+	"layer": "top",
 	"modules-left": [
-		"sway/workspaces",
-		"sway/mode",
-		"sway/window"
+		"hyprland/workspaces"
 	],
 	"modules-center": [
-		"clock"
 	],
 	"modules-right": [
-		"pulseadudio",
-		"network"
+		"clock"
 	],
 
 	"clock": {
-		"format": "{:%I:%M %p - %a %e}"
+		"format": "{:%I:%M\n%p}"
+	},
+
+	// center
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"default": "",
+			"active": ""
+		},
+		"active-only": "false",
+		"on-scroll-up": "hyprctl dispatch workspace e-1",
+		"on-scroll-down": "hyprctl dispatch workspace e+1"
 	}
 }
