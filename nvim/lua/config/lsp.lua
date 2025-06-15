@@ -16,6 +16,9 @@ lspconfig.glsl_analyzer.setup {
 lspconfig.lua_ls.setup {
 	capabilities = capabilities,
 }
+lspconfig.pylsp.setup {
+	capabilities = capabilities,
+}
 
 
 -- show errors after a line

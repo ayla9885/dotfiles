@@ -1,28 +1,68 @@
 {
 	"position": "left",
+	"reload_style_on_change": true,
 	"layer": "top",
+	"spacing": 15,
+	"margin-top": 20,
+	"margin-bottom": 20,
 	"modules-left": [
+		"custom/logo",
 		"hyprland/workspaces"
 	],
 	"modules-center": [
+		"hyprland/window"
 	],
 	"modules-right": [
-		"clock"
+		"tray",
+		"wireplumber",
+		"clock",
+		"custom/power"
 	],
 
+	"custom/logo": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/power": {
+		"format": "󰤆",
+		"tooltip": false
+	},
+
+	"wireplumber": {
+		"format": "{volume}%\n{icon}",
+		"format-muted": "MUTE\n",
+		"format-icons": ["", "", ""],
+		"justify": "center"
+	},
 	"clock": {
 		"format": "{:%I:%M\n%p}"
 	},
 
-	// center
+	"hyprland/window": {
+		"format": "{title}",
+		"rotate": 90,
+		"justify": "left"
+	},
+
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
 			"default": "",
 			"active": ""
 		},
-		"active-only": "false",
+		"active-only": false,
 		"on-scroll-up": "hyprctl dispatch workspace e-1",
-		"on-scroll-down": "hyprctl dispatch workspace e+1"
+		"on-scroll-down": "hyprctl dispatch workspace e+1",
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": []
+		}
+	},
+
+	"clock": {
+		"format": "{:%I\n%M\n%p}"
 	}
 }

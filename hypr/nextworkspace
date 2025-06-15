@@ -1,0 +1,7 @@
+#!/bin/bash
+# Script to move to next workspace, but stop at 5
+currWorkspace=$(echo $(hyprctl activeworkspace) | sed 's@^[^0-9]*\([0-9]\+\).*@\1@')
+if [[ $currWorkspace -lt 5 ]]; then
+	hyprctl -q dispatch workspace $(( $currWorkspace+1 ))
+fi
+
