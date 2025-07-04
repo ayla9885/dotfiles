@@ -1,5 +1,6 @@
 -- general
-vim.cmd[[colorscheme no-clown-fiesta]]
+local vim = vim
+vim.cmd[[colorscheme monochrome]]
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
@@ -10,6 +11,7 @@ vim.opt.ruler = false
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.title = true
+vim.opt.cmdheight = 0
 
 -- movement
 vim.opt.scrolloff = 20

@@ -1,24 +1,28 @@
 local lspconfig = require("lspconfig")
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+--local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lspconfig.rust_analyzer.setup {
-	capabilities = capabilities,
+	--capabilities = capabilities,
 }
 lspconfig.clangd.setup {
-	capabilities = capabilities,
+	--capabilities = capabilities,
 }
 lspconfig.jdtls.setup {
-	capabilities = capabilities,
+	--capabilities = capabilities,
 }
 lspconfig.glsl_analyzer.setup {
-	capabilities = capabilities,
+	--capabilities = capabilities,
 }
 lspconfig.lua_ls.setup {
-	capabilities = capabilities,
+	--capabilities = capabilities,
 }
 lspconfig.pylsp.setup {
-	capabilities = capabilities,
+	--capabilities = capabilities,
 }
+lspconfig.zls.setup {
+	--capabilities = capabilities,
+}
+
 
 
 -- show errors after a line

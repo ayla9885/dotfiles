@@ -1,36 +1,62 @@
 return {
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	opts = function()
+	-- 		local cmp = require("cmp")
+	-- 		return {
+	-- 			snippet = {
+	-- 				expand = function(args)
+	-- 					vim.snippet.expand(args.body)
+	-- 				end,
+	-- 			},
+	-- 			mapping = {
+	-- 				['<cr>'] = cmp.mapping(function(fallback)
+	-- 					if cmp.visible() then
+	-- 						cmp.confirm({select = true})
+	-- 					else
+	-- 						fallback()
+	-- 					end
+	-- 				end),
+	-- 				['<Tab>'] = cmp.mapping(function(fallback)
+	-- 					if cmp.visible() then
+	-- 						cmp.select_next_item()
+	-- 					else
+	-- 						fallback()
+	-- 					end
+	-- 				end),
+	-- 				['<S-Tab>'] = cmp.mapping(function(fallback)
+	-- 					if cmp.visible() then
+	-- 						cmp.select_prev_item()
+	-- 					else
+	-- 						fallback()
+	-- 					end
+	-- 				end)
+	-- 			},
+	-- 			sources = cmp.config.sources({
+	-- 				{ name = "nvim_lsp", },
+	-- 			}, {
+	-- 				{ name = "buffer" },
+	-- 			}),
+	-- 		}
+	-- 	end
+	-- },
+	-- {
+	-- 	"hrsh7th/cmp-nvim-lsp",
+	-- 	opts = {
+	-- 		sources = {
+	-- 			{ name = 'nvim_lsp'}
+	-- 		}
+	-- 	},
+	-- },
 	{
-		"hrsh7th/nvim-cmp",
-		opts = function()
-			local cmp = require("cmp")
-			return {
-				snippet = {
-					expand = function(args)
-						vim.snippet.expand(args.body)
-					end,
-				},
-				mapping = cmp.mapping.preset.insert({
-					['<Up>'] = cmp.mapping.select_prev_item(),
-					['<Down>'] = cmp.mapping.select_next_item(),
-					['<C-b>'] = cmp.mapping.scroll_docs(-4),
-					['<C-f>'] = cmp.mapping.scroll_docs(4),
-					['<C-Space>'] = cmp.mapping.complete(),
-					['<C-e>'] = cmp.mapping.abort(),
-					['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-				}),
-				sources = {
-					{ name = "nvim_lsp", },
-				},
-			}
-		end
+		"echasnovski/mini.completion",
+		version = false,
+		opts = {},
 	},
 	{
-		"hrsh7th/cmp-nvim-lsp",
-		opts = {
-			sources = {
-				{ name = 'nvim_lsp'}
-			}
-		},
+		"echasnovski/mini.snippets",
+		version = false,
+		opts = {}
 	},
 	{
 		"neovim/nvim-lspconfig",
