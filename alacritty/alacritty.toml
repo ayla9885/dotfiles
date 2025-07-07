@@ -2,17 +2,8 @@
 live_config_reload = true
 
 [font]
-#normal = { family = "AgaveNerdFontMono", style = "Regular" }
-size = 14 
-builtin_box_drawing = false
-
-[window]
-dynamic_title = false
-opacity = 0.80
+normal = { family = "ProFontWindowsNerdFont", style = "Regular" }
+size = 13.25 
 
 [colors.primary]
-foreground = "#C9B5B6"
-background = "#131623"
-
-[colors]
-
+background = "#000000"
