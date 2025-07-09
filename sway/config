@@ -26,7 +26,7 @@ output "AOC 24G1WG3- PIBL8JA001682" {
 }
 output "BOE 0x0894 Unknown" {
 		scale 1.5
-	}
+}
 
 #output * bg ~/pictures/wallpapers/mt_fuji_purple.jpg fill
 
@@ -51,22 +51,17 @@ client.focused #000000 #FFFFFF #000000 #999999
 ### Font configuration
 #
 
-font TerminessNerdFontMono 13
+font ProFontWindowsNerdFont 13
 
 ### Idle configuration
 #
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-exec swayidle -w \
-	timeout 600 'systemctl suspend'
+
+# Set timeout based on machine.
+# 30 minutes for pc
+# 10 for everything else
+exec exec bash -c "if [[ $(uname -n) = 'Noahs-PC' ]]; then swayidle -w \
+	timeout 1800 'systemctl suspend'; else swayidle -w \
+	timeout  600 'systemctl suspend'; fi"
 
 ### Input configuration
 #
@@ -77,12 +72,16 @@ input * {
 	repeat_delay 360
 	repeat_rate 25
 
-	natural_scroll enabled
 	accel_profile flat
+}
+
+input touchpad {
+	natural_scroll enabled
 	drag enabled
 	dwt disabled
 	tap enabled
 }
+
 
 # mouse follows focus
 mouse_warping container
@@ -180,8 +179,8 @@ mouse_warping container
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    # bindsym $mod+s layout stacking
+    # bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
