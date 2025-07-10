@@ -63,6 +63,10 @@ exec exec bash -c "if [[ $(uname -n) = 'Noahs-PC' ]]; then swayidle -w \
 	timeout 1800 'systemctl suspend'; else swayidle -w \
 	timeout  600 'systemctl suspend'; fi"
 
+### Night-light autostart
+#
+exec exec gammastep 
+
 ### Input configuration
 #
 
