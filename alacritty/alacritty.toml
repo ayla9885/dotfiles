@@ -7,3 +7,8 @@ size = 13.25
 
 [colors.primary]
 background = "#000000"
+
+[cursor]
+style = { shape="Block", blinking="Always" } 
+blink_interval = 500
+blink_timeout = 10
