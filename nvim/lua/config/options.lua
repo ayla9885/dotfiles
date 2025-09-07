@@ -1,6 +1,6 @@
 -- general
 local vim = vim
-vim.cmd[[colorscheme monochrome]]
+vim.cmd[[colorscheme catppuccin]]
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
@@ -38,3 +38,8 @@ vim.opt.wrap = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.syntax = "enable"
 vim.opt.spell = false
+
+-- turn off cursorline highlights in terminal buffers
+vim.api.nvim_create_autocmd("TermOpen", {
+								pattern = "*",
+								callback = function() vim.opt.cursorline=false end })
