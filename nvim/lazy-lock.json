@@ -1,5 +1,6 @@
 {
   "base16-black-metal-scheme": { "branch": "master", "commit": "c7a32bec8105a1ceddb9fcc90b713dabde5e7e5e" },
+  "chadtree": { "branch": "chad", "commit": "bc34bbf898c5832fae1390c963365be5f71bb152" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "mini.completion": { "branch": "main", "commit": "c131961f9040726432f98a27565db8b0bef5b718" },
   "mini.icons": { "branch": "main", "commit": "f9a177c11daa7829389b7b6eaaec8b8a5c47052d" },
@@ -17,5 +18,5 @@
   "telescope.nvim": { "branch": "master", "commit": "b4da76be54691e854d3e0e02c36b0245f945c2c7" },
   "vim-tmux-navigator": { "branch": "master", "commit": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
-  "yazi.nvim": { "branch": "main", "commit": "45362b590c8aefb1c573cc935784d723ff1c0188" }
+  "winshift.nvim": { "branch": "main", "commit": "37468ed6f385dfb50402368669766504c0e15583" }
 }
