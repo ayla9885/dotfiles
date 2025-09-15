@@ -1,64 +1,34 @@
 return {
-	-- {
-	-- 	"hrsh7th/nvim-cmp",
-	-- 	opts = function()
-	-- 		local cmp = require("cmp")
-	-- 		return {
-	-- 			snippet = {
-	-- 				expand = function(args)
-	-- 					vim.snippet.expand(args.body)
-	-- 				end,
-	-- 			},
-	-- 			mapping = {
-	-- 				['<cr>'] = cmp.mapping(function(fallback)
-	-- 					if cmp.visible() then
-	-- 						cmp.confirm({select = true})
-	-- 					else
-	-- 						fallback()
-	-- 					end
-	-- 				end),
-	-- 				['<Tab>'] = cmp.mapping(function(fallback)
-	-- 					if cmp.visible() then
-	-- 						cmp.select_next_item()
-	-- 					else
-	-- 						fallback()
-	-- 					end
-	-- 				end),
-	-- 				['<S-Tab>'] = cmp.mapping(function(fallback)
-	-- 					if cmp.visible() then
-	-- 						cmp.select_prev_item()
-	-- 					else
-	-- 						fallback()
-	-- 					end
-	-- 				end)
-	-- 			},
-	-- 			sources = cmp.config.sources({
-	-- 				{ name = "nvim_lsp", },
-	-- 			}, {
-	-- 				{ name = "buffer" },
-	-- 			}),
-	-- 		}
-	-- 	end
-	-- },
-	-- {
-	-- 	"hrsh7th/cmp-nvim-lsp",
-	-- 	opts = {
-	-- 		sources = {
-	-- 			{ name = 'nvim_lsp'}
-	-- 		}
-	-- 	},
-	-- },
-	{
-		"echasnovski/mini.completion",
-		version = false,
-		opts = {},
-	},
-	{
-		"echasnovski/mini.snippets",
-		version = false,
-		opts = {}
-	},
 	{
 		"neovim/nvim-lspconfig",
+		lazy = false,
+		dependencies = {
+			{ "ms-jpq/coq_nvim", branch = "coq" },
+			{ "ms-jpq/coq.artifacts", branch = "artifacts" }
+		},
+		init = function()
+			vim.g.coq_settings = {
+				-- COQ Settings
+				auto_start = "shut-up",
+			}
+		end,
+		config = function()
+			local coq = require("coq")
+			local vim = vim
+			vim.lsp.config('lua_ls', coq.lsp_ensure_capabilities())
+			vim.lsp.enable('lua_ls')
+			vim.lsp.config('clangd', coq.lsp_ensure_capabilities())
+			vim.lsp.enable('clangd')
+			vim.lsp.config('jdtls', coq.lsp_ensure_capabilities())
+			vim.lsp.enable('jdtls')
+			vim.lsp.config('glsl_analyzer', coq.lsp_ensure_capabilities())
+			vim.lsp.enable('glsl_analyzer')
+			vim.lsp.config('rust_analyzer', coq.lsp_ensure_capabilities())
+			vim.lsp.enable('rust_analyzer')
+			vim.lsp.config('pylsp', coq.lsp_ensure_capabilities())
+			vim.lsp.enable('pylsp')
+			vim.lsp.config('zls', coq.lsp_ensure_capabilities())
+			vim.lsp.enable('zls')
+		end,
 	},
 }
