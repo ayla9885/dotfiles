@@ -39,13 +39,3 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.syntax = "enable"
 vim.opt.spell = false
 
--- turn off cursorline highlights in terminal buffers
-vim.api.nvim_create_autocmd("TermOpen", {
-								pattern = "*",
-								callback = function() vim.opt.cursorline=false end })
-
--- turn on line width marker when editing markdown files
-vim.api.nvim_create_autocmd("BufReadPost", {
-								pattern = "*.md, *.markdown",
-								callback = function() vim.opt.colorcolumn="81"
-													vim.opt.spell = true end })

@@ -15,7 +15,26 @@ return {
 		config = function()
 			local coq = require("coq")
 			local vim = vim
-			vim.lsp.config('lua_ls', coq.lsp_ensure_capabilities())
+			vim.lsp.config('lua_ls', coq.lsp_ensure_capabilities({
+				on_attach = on_attach,
+				flags = lsp_flags,
+				setting = {
+					Lua = {
+						runtime = {
+							version = "LuaJIT"
+						},
+						diagnostics = {
+							globals = { "vim" }
+						},
+						workspace = {
+							library = vim.api.nvim_get_runtime_file("lua", true)
+						},
+						telemetry = {
+							enable = false
+						}
+					}
+				}
+			}))
 			vim.lsp.enable('lua_ls')
 			vim.lsp.config('clangd', coq.lsp_ensure_capabilities())
 			vim.lsp.enable('clangd')
