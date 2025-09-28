@@ -2,7 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 	fish_add_path ~/Scipts
 	abbr --add tree 'tree -C'
-	set -x EDITOR vim
+	abbr --add vim nvim
+	set -x EDITOR nvim
 	set -x EXT_COMPOSITOR_COMPUTE 1 # Avoid stuttering in vr
 	set -g fish_greeting 			# remove greeting
 end
