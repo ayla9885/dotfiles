@@ -47,3 +47,12 @@ vim.lsp.config("lua_ls", {
 		}
 	}
 })
+
+-- Highlight on yank
+vim.api.nvim_create_autocmd('TextYankPost', {
+	desc = 'Highlight selection on yank',
+	pattern = '*',
+	callback = function()
+		vim.highlight.on_yank { higroup = 'IncSearch', timeout = 150 }
+	end,
+})
