@@ -1,12 +1,6 @@
 *
 !.gitignore
 
-!sway
-!sway/**
-
-!waybar
-!waybar/**
-
 !nvim
 !nvim/**
 
@@ -18,18 +12,6 @@
 
 !tmux
 !tmux/**
-
-!hypr
-!hypr/**
-
-!swappy
-!swappy/**
-
-!dunst
-!dunst/**
-
-!fish
-!fish/**
 
 !gammastep
 !gammastep/**
