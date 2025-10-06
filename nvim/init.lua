@@ -37,7 +37,7 @@ vim.pack.add({
 })
 
 -- LSP
-vim.lsp.enable({ "lua_ls", "clangd", "jdtls", "pylsp" })
+vim.lsp.enable({ "lua_ls", "clangd", "jdtls", "pylsp", "qmlls" })
 vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
